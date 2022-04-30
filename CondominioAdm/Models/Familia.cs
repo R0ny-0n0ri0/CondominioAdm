@@ -15,9 +15,17 @@ public class Familia
 
     public string Name { get; set; }
 
-    [Required(ErrorMessage = "Informe o numero do Apto")]
+    [Required(ErrorMessage = "Informe o numero do Apartamento")]
     [Display(Name = "Apto")]
     public int Apto { get; set; }
+
+    [Required(ErrorMessage = "Informe a Area Total do Apartamento")]
+    [Display(Name = "AreaApto")]
+    public double AreaApto { get; set; }
+
+    [Required(ErrorMessage = "Informe o IPTU do Apartamento")]
+    [Display(Name = "IPTUApto")]
+    public double IPTUApto { get; set; }
 
     public int CondominioId { get; set; }
 

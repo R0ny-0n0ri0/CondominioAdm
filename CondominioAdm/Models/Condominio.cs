@@ -18,6 +18,14 @@ public class Condominio
     [Required(ErrorMessage = "Informe o Bairro do Condominio")]
     [Display(Name = "Bairo")]
     public string Bairro { get; set; }
+
+    [Required(ErrorMessage = "Informe a Area Total do Condominio")]
+    [Display(Name = "AreaTotal")]
+    public double AreaTotal { get; set; }
+
+    [Required(ErrorMessage = "Informe o IPTU do Condominio")]
+    [Display(Name = "IPTU")]
+    public double IPTU { get; set; }
      
     public List<Familia> Familia { get; set; }
 }

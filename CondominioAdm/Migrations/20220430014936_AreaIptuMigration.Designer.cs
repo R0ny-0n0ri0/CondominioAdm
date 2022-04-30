@@ -3,6 +3,7 @@ using CondominioAdm.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CondominioAdm.Migrations
 {
     [DbContext(typeof(CondominioAdmContext))]
-    partial class CondominioAdmContextModelSnapshot : ModelSnapshot
+    [Migration("20220430014936_AreaIptuMigration")]
+    partial class AreaIptuMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +49,7 @@ namespace CondominioAdm.Migrations
 
                     b.HasKey("CondominioId");
 
-                    b.ToTable("Condominios", (string)null);
+                    b.ToTable("Condominios");
                 });
 
             modelBuilder.Entity("CondominioAdm.Models.Familia", b =>
@@ -79,7 +81,7 @@ namespace CondominioAdm.Migrations
 
                     b.HasIndex("CondominioId");
 
-                    b.ToTable("Familias", (string)null);
+                    b.ToTable("Familias");
                 });
 
             modelBuilder.Entity("CondominioAdm.Models.Morador", b =>
@@ -105,7 +107,7 @@ namespace CondominioAdm.Migrations
 
                     b.HasIndex("FamiliaId");
 
-                    b.ToTable("Moradores", (string)null);
+                    b.ToTable("Moradores");
                 });
 
             modelBuilder.Entity("CondominioAdm.Models.Familia", b =>
